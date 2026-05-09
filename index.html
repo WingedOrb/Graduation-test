@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WildWatch · Endangered Species Data</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-paw"></i> Endangered Animals & Conservation Facts
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#species">Species</a></li>
+                <li><a href="#data">Data</a></li>
+                <li><a href="#conservation">Conservation</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#get-involved">Get Involved</a></li>
+            </ul>
+            <div class="nav-right">
+                <div class="search-icon"><i class="fas fa-search"></i></div>
+                <div class="menu-icon"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION WITH LARGE ANIMAL IMAGE -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-tagline">IUCN Red List Data 2025</span>
+            <h1 class="hero-title">Vanishing <span>Voices</span></h1>
+            <p class="hero-description">Over 42,100 species are threatened with extinction. Explore the data, meet the animals, and discover how you can help protect our planet's biodiversity.</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">42,100+</span>
+                    <span class="stat-label">Threatened Species</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">16,306</span>
+                    <span class="stat-label">Endangered</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">187</span>
+                    <span class="stat-label">Countries</span>
+                </div>
+            </div>
+            <div class="hero-buttons">
+                <a href="#species" class="btn btn-primary">Explore Species <i class="fas fa-arrow-right"></i></a>
+                <a href="#data" class="btn btn-outline">View Data</a>
+            </div>
+        </div>
+        <div class="hero-gallery">
+            <div class="gallery-main">
+                <img src="./images/benegal-tiger.webp" alt="Tiger in wild" >
+                <div class="image-caption">Bengal Tiger · Endangered</div>
+            </div>
+                <div class="gallery-grid">
+                    <img src="./images/elephant.webp" alt="Elephant">
+                    <img src="./images/orangutan.jpg" alt="Orangutan">
+                    <img src="https://images.unsplash.com/photo-1589656966895-2f33e7653819?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Polar Bear">
+                    <img src="./images/black-rhino.jpg" alt="Rhino" >
+                </div>
+        
+        </div>
+    </section>
+
+    <!-- DATA DASHBOARD SECTION -->
+    <section class="dashboard" id="data">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Global Status</span>
+                <h2>Endangered Species <span>Dashboard</span></h2>
+                <p>Real-time data from the IUCN Red List of Threatened Species</p>
+            </div>
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <div class="card-icon"><i class="fas fa-skull-crosswalk"></i></div>
+                    <div class="card-number">6,811</div>
+                    <div class="card-label">Critically Endangered</div>
+                    <div class="card-trend negative"><i class="fas fa-arrow-up"></i> +12% since 2020</div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="card-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                    <div class="card-number">11,732</div>
+                    <div class="card-label">Endangered</div>
+                    <div class="card-trend negative"><i class="fas fa-arrow-up"></i> +8% since 2020</div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="card-number">7,763</div>
+                    <div class="card-label">Vulnerable</div>
+                    <div class="card-trend neutral"><i class="fas fa-minus"></i> Stable</div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="card-icon"><i class="fas fa-leaf"></i></div>
+                    <div class="card-number">217</div>
+                    <div class="card-label">Conservation Success</div>
+                    <div class="card-trend positive"><i class="fas fa-arrow-up"></i> +23 species recovered</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED SPECIES GALLERY (MAIN ANIMAL SHOWCASE) -->
+    <section class="featured-species" id="species">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Meet The Animals</span>
+                <h2>Featured <span>Endangered Species</span></h2>
+                <p>Photographs and data from the wild. Each image tells a story of survival.</p>
+            </div>
+            <div class="species-grid" id="speciesGrid">
+                <!-- Species will be loaded via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- HABITAT MAP SECTION -->
+    <section class="habitat-map">
+        <div class="container">
+            <div class="map-wrapper">
+                <div class="map-content">
+                    <h2>Biodiversity <span>Hotspots</span></h2>
+                    <p>Conservation International has identified 36 biodiversity hotspots worldwide. These regions contain 44% of the world's plants and 35% of land vertebrates, yet only 2.3% of the original habitat remains.</p>
+                    <div class="hotspot-stats">
+                        <div class="hotspot-stat">
+                            <span class="stat-big">36</span>
+                            <span>Hotspots</span>
+                        </div>
+                        <div class="hotspot-stat">
+                            <span class="stat-big">50%</span>
+                            <span>Endemic Plants</span>
+                        </div>
+                        <div class="hotspot-stat">
+                            <span class="stat-big">43%</span>
+                            <span>Vertebrates</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-image">
+                    <img src="https://images.unsplash.com/photo-1524666041070-9b87652fd51d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="World map with wildlife">
+                    <div class="map-overlay">
+                        <div class="pin amazon"><span>🐆</span></div>
+                        <div class="pin congo"><span>🦍</span></div>
+                        <div class="pin borneo"><span>🦧</span></div>
+                        <div class="pin himalayas"><span>🐅</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THREATS & SOLUTIONS SECTION -->
+    <section class="threats">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Understanding The Crisis</span>
+                <h2>Major <span>Threats</span> To Wildlife</h2>
+                <p>Four primary drivers of species extinction</p>
+            </div>
+            <div class="threats-grid">
+                <div class="threat-card">
+                    <div class="threat-icon"><i class="fas fa-tree"></i></div>
+                    <h3>Habitat Loss</h3>
+                    <p class="threat-stat">85% of species threatened</p>
+                    <p>Deforestation, agriculture, and urban development destroy 18.7 million acres of forest annually.</p>
+                    <img src="./images/deforestation.jpg" alt="Deforestation" class="threat-image">
+
+                </div>
+                <div class="threat-card">
+                    <div class="threat-icon"><i class="fas fa-gun"></i></div>
+                    <h3>Poaching</h3>
+                    <p class="threat-stat">1,000+ rhinos killed annually</p>
+                    <p>Illegal wildlife trade generates $23 billion per year, affecting tigers, elephants, pangolins, and more.</p>
+                    <img src="./images/elephant-paoching.jpg"  alt="Elephant with ranger" class="threat-image">
+                </div>
+                <div class="threat-card">
+                    <div class="threat-icon"><i class="fas fa-temperature-high"></i></div>
+                    <h3>Climate Change</h3>
+                    <p class="threat-stat">1M species at risk</p>
+                    <p>Rising temperatures, ocean acidification, and extreme weather events disrupt ecosystems worldwide.</p>
+                    <img src="./images/polar-bear-on-ice.jpg" alt="Polar bear on ice" class="threat-image">
+                </div>
+                <div class="threat-card">
+                    <div class="threat-icon"><i class="fas fa-fish"></i></div>
+                    <h3>Pollution</h3>
+                    <p class="threat-stat">8M tons plastic/year</p>
+                    <p>90% of seabirds have plastic in their stomachs. Chemical runoff creates 500+ ocean dead zones.</p>
+                    <img src="./images/ocean-polution.jpg" alt="Ocean pollution" class="threat-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONSERVATION SUCCESS STORIES -->
+    <section class="success-stories" id="conservation">
+        <div class="container">
+            <div class="section-header light">
+                <span class="section-subtitle">Hope In Action</span>
+                <h2>Conservation <span>Success Stories</span></h2>
+                <p>Species that are making a comeback thanks to global efforts</p>
+            </div>
+            <div class="stories-grid">
+                <div class="story-card">
+                    <img src="./images/mountain-gorrila.jpg" alt="Mountain Gorilla">
+                    <div class="story-content">
+                        <h3>Mountain Gorilla</h3>
+                        <p class="story-status">Critically Endangered → Endangered</p>
+                        <p class="story-stats">Population: 680 → 1,063+</p>
+                        <p>Intensive conservation in Rwanda, Uganda, and DRC brought them back from the brink.</p>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <img src="./images/bornean-orangutan.jpg" alt="Orangutan">
+                    <div class="story-content">
+                        <h3>Bornean Orangutan</h3>
+                        <p class="story-status">Critically Endangered</p>
+                        <p class="story-stats">Population stabilization efforts</p>
+                        <p>Rehabilitation centers and protected corridors are showing promising results.</p>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <img src="./images/humpback-whale.jpg" alt="Humpback Whale">
+                    <div class="story-content">
+                        <h3>Humpback Whale</h3>
+                        <p class="story-status">Endangered → Least Concern</p>
+                        <p class="story-stats">Population: 10,000 → 80,000+</p>
+                        <p>Commercial whaling ban led to one of the greatest conservation recoveries.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONSERVATION ORGANIZATIONS -->
+    <section class="organizations">
+        <div class="container">
+            <h2>Organizations Making A Difference</h2>
+            <div class="org-grid">
+                <div class="org-card">
+                    <i class="fab fa-cc-discover"></i>
+                    <h3>WWF</h3>
+                    <p>World Wildlife Fund · 5M+ supporters</p>
+                </div>
+                <div class="org-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Greenpeace</h3>
+                    <p>Protecting forests and oceans since 1971</p>
+                </div>
+                <div class="org-card">
+                    <i class="fas fa-tree"></i>
+                    <h3>Conservation International</h3>
+                    <p>Science-based solutions</p>
+                </div>
+                <div class="org-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>IUCN</h3>
+                    <p>Global authority on species status</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LATEST CONSERVATION NEWS -->
+    <section class="news" id="news">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Recent Updates</span>
+                <h2>Conservation <span>News</span></h2>
+                <p>Stay informed about the latest developments</p>
+            </div>
+            <div class="news-grid">
+                <div class="news-card">
+                    <img src="./images/amazon-deforestation.jpg" alt="Forest">
+                    <div class="news-content">
+                        <span class="news-date">March 15, 2025</span>
+                        <h3>Amazon Deforestation Drops 30%</h3>
+                        <p>Brazil reports lowest deforestation rate in five years due to enhanced enforcement.</p>
+                        <a href="#">Read More →</a>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Tiger">
+                    <div class="news-content">
+                        <span class="news-date">March 10, 2025</span>
+                        <h3>India's Tiger Population Doubles</h3>
+                        <p>Successful conservation brings tigers to 3,500, half of global wild population.</p>
+                        <a href="#">Read More →</a>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Coral Reef">
+                    <div class="news-content">
+                        <span class="news-date">March 5, 2025</span>
+                        <h3>Largest Coral Restoration Project</h3>
+                        <p>New technique plants 10,000 corals per day in Great Barrier Reef trial.</p>
+                        <a href="#">Read More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GET INVOLVED SECTION -->
+    <section class="get-involved" id="get-involved">
+        <div class="container">
+            <div class="involved-content">
+                <h2>You Can <span>Make A Difference</span></h2>
+                <p>Every action counts. Here's how you can help protect endangered species today.</p>
+                <div class="involved-options">
+                    <div class="option">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <h3>Donate</h3>
+                        <p>Support conservation organizations</p>
+                    </div>
+                    <div class="option">
+                        <i class="fas fa-bullhorn"></i>
+                        <h3>Speak Up</h3>
+                        <p>Share information and raise awareness</p>
+                    </div>
+                    <div class="option">
+                        <i class="fas fa-recycle"></i>
+                        <h3>Sustainable Living</h3>
+                        <p>Reduce plastic, choose sustainable products</p>
+                    </div>
+                    <div class="option">
+                        <i class="fas fa-binoculars"></i>
+                        <h3>Eco-Tourism</h3>
+                        <p>Visit national parks ethically</p>
+                    </div>
+                </div>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email for conservation updates">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="logo"><i class="fas fa-paw"></i> WildWatch</div>
+                <p>Dedicated to documenting and protecting Earth's endangered species through data and storytelling.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#">Species Database</a></li>
+                    <li><a href="#">Conservation Map</a></li>
+                    <li><a href="#">Success Stories</a></li>
+                    <li><a href="#">Research</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">IUCN Red List</a></li>
+                    <li><a href="#">WWF</a></li>
+                    <li><a href="#">Wildlife Justice</a></li>
+                    <li><a href="#">Educators</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> apply@coderseries.co.uk </li>
+                    <li><i class="fas fa-phone"></i>+44 784 649 0506 </li>
+                    <li><i class="fas fa-map-marker-alt"></i>International House, 61 Mosley Street, Manchester, M2 3HZ.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 WildWatch. Data sources: IUCN Red List, WWF, Conservation International.</p>
+            <p>All animal photographs courtesy of Unsplash, Pexels, and Pixabay · Free for use</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
